@@ -11,7 +11,7 @@ on:
     branches: [ master ]
 
 jobs:
-  deploay+docs:
+  deploay_docs:
    runs-on: macOS-latest
    steps:
     - uses: actions/checkout@v1
