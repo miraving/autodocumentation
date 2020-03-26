@@ -8,11 +8,14 @@
 
 import UIKit
 
+/// Second view controller or detail screen
 class DetailViewController: UIViewController {
 
+    /// Outlet for description label
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
+    
+    /// Config controller
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
@@ -21,7 +24,8 @@ class DetailViewController: UIViewController {
             }
         }
     }
-
+    
+    /// Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

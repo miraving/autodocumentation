@@ -8,12 +8,15 @@
 
 import UIKit
 
+/// Master view controller. The main controller or Home screen
 class MasterViewController: UITableViewController {
 
+    /// Detail view controller
     var detailViewController: DetailViewController? = nil
+    /// Objects array
     var objects = [Any]()
 
-
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,12 +29,13 @@ class MasterViewController: UITableViewController {
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
 
+    /// Insert new random object to objects array
     @objc
     func insertNewObject(_ sender: Any) {
         objects.insert(NSDate(), at: 0)
@@ -39,8 +43,7 @@ class MasterViewController: UITableViewController {
         tableView.insertRows(at: [indexPath], with: .automatic)
     }
 
-    // MARK: - Segues
-
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
@@ -55,27 +58,46 @@ class MasterViewController: UITableViewController {
     }
 
     // MARK: - Table View
-
+    
+    /// Number of section for table view
+    /// - Parameter tableView: current table view
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
+    /// Number of rows for section
+    /// - Parameters:
+    ///   - tableView: curreent table
+    ///   - section: current section
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count
     }
-
+    
+    /// Cell for index path
+    /// - Parameters:
+    ///   - tableView: current table view
+    ///   - indexPath: current index path
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let object = objects[indexPath.row] as! NSDate
         cell.textLabel!.text = object.description
         return cell
     }
-
+    
+    /// Set can edition rows
+    /// - Parameters:
+    ///   - tableView: current table view
+    ///   - indexPath: current index path
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-
+    
+    /// Edit action for rows
+    /// - Parameters:
+    ///   - tableView: current table view
+    ///   - editingStyle: editingStyle value
+    ///   - indexPath: current index path
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             objects.remove(at: indexPath.row)
@@ -84,7 +106,4 @@ class MasterViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
-
 }
-
