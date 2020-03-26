@@ -11,7 +11,7 @@ on:
     branches: [ master ]
 
 jobs:
-  deploay_docs:
+  deploy_docs:
    runs-on: macOS-latest
    steps:
     - uses: actions/checkout@v1
@@ -20,4 +20,3 @@ jobs:
       with:
         personal_access_token: ${{ secrets.c4811fa5985d84ae329efcda3c1e0985584b73b5 }}
         config: .jazzy.yml
-        version: 0.0.1
