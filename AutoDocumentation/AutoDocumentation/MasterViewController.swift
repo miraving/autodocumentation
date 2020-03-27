@@ -28,12 +28,10 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
-        super.viewWillAppear(animated)
-    }
 
     /// Insert new random object to objects array
     @objc

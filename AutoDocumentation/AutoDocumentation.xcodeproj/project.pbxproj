@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FD40F5AB242D1038000787FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40F5AA242D1038000787FF /* AppDelegate.swift */; };
-		FD40F5AD242D1038000787FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40F5AC242D1038000787FF /* SceneDelegate.swift */; };
 		FD40F5AF242D1038000787FF /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40F5AE242D1038000787FF /* MasterViewController.swift */; };
 		FD40F5B1242D1038000787FF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40F5B0242D1038000787FF /* DetailViewController.swift */; };
-		FD40F5B4242D1038000787FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD40F5B2242D1038000787FF /* Main.storyboard */; };
 		FD40F5B6242D103B000787FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD40F5B5242D103B000787FF /* Assets.xcassets */; };
 		FD40F5B9242D103B000787FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD40F5B7242D103B000787FF /* LaunchScreen.storyboard */; };
 		FD40F5C4242D103C000787FF /* AutoDocumentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40F5C3242D103C000787FF /* AutoDocumentationTests.swift */; };
@@ -30,10 +28,8 @@
 /* Begin PBXFileReference section */
 		FD40F5A7242D1038000787FF /* AutoDocumentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoDocumentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD40F5AA242D1038000787FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD40F5AC242D1038000787FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FD40F5AE242D1038000787FF /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		FD40F5B0242D1038000787FF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		FD40F5B3242D1038000787FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD40F5B5242D103B000787FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD40F5B8242D103B000787FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD40F5BA242D103B000787FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,10 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				FD40F5AA242D1038000787FF /* AppDelegate.swift */,
-				FD40F5AC242D1038000787FF /* SceneDelegate.swift */,
 				FD40F5AE242D1038000787FF /* MasterViewController.swift */,
 				FD40F5B0242D1038000787FF /* DetailViewController.swift */,
-				FD40F5B2242D1038000787FF /* Main.storyboard */,
 				FD40F5B5242D103B000787FF /* Assets.xcassets */,
 				FD40F5B7242D103B000787FF /* LaunchScreen.storyboard */,
 				FD40F5BA242D103B000787FF /* Info.plist */,
@@ -185,7 +179,6 @@
 			files = (
 				FD40F5B9242D103B000787FF /* LaunchScreen.storyboard in Resources */,
 				FD40F5B6242D103B000787FF /* Assets.xcassets in Resources */,
-				FD40F5B4242D1038000787FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +197,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD40F5AB242D1038000787FF /* AppDelegate.swift in Sources */,
-				FD40F5AD242D1038000787FF /* SceneDelegate.swift in Sources */,
 				FD40F5AF242D1038000787FF /* MasterViewController.swift in Sources */,
 				FD40F5B1242D1038000787FF /* DetailViewController.swift in Sources */,
 			);
@@ -229,14 +221,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FD40F5B2242D1038000787FF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD40F5B3242D1038000787FF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FD40F5B7242D103B000787FF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -298,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -352,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
