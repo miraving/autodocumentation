@@ -3,13 +3,13 @@ output: ../docs
 title: My first autogendoc project
 clean: true
 objc: false
-xcodebuild_arguments: 
-- -scheme 
-- AutoDocumentation 
-- CODE_SIGNING_ALLOWED = NO
+# xcodebuild_arguments: 
+# - -scheme 
+# - AutoDocumentation 
+# - CODE_SIGNING_ALLOWED = NO
 # umbrella_header: 
 # framework_root: .
-module: AutoDocumentation
+module: AutoDocumentation/AutoDocumentation
 module_version: 1.2.3
 author: mirav!ng
 copyright: Copyright 2016 mirav!ng.
