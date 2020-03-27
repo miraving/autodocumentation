@@ -3,12 +3,12 @@ author: miraving
 author_url: https://github.com/miraving
 github_url: https://github.com/miraving/autodocumentation
 framework_root: /
-output: ../docs
+output: docs
 title: My first autogendoc project
 clean: true
 sdk: iphonesimulator
 skip_undocumented: true
 hide_documentation_coverage: false
 theme: fullwidth
-# min_acl: internal
+min_acl: internal
 exclude:
